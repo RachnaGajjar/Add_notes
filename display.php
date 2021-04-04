@@ -30,7 +30,7 @@ session_start();
 			$Check=mysqli_num_rows($quary);
 			$num=1;
    while($result=mysqli_fetch_array($quary))
-			{
+			{ 
 		?>
 				<tr>
 					<td>

@@ -61,7 +61,7 @@ if(!isset($_SESSION['username']))
     <label for="exampleFormControlTextarea1">write here to notes</label>
     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="notes"></textarea>
   </div>
-  <center> <a class="btn btn-success" href="display.php">Show list</a>
+  <center> <a class="btn btn-success" href="display.php">Show list</a> 
   <button class="btn btn-primary" type="submit" name="submit">Submit</button></center>
  
 </form>

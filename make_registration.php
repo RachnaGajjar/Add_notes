@@ -22,7 +22,8 @@ else
 {
 	$reg="insert into userdetail(email, password,retypepassword) values ('$Email','$Password','$Retypepassword')";
 	mysqli_query($con,$reg);
-	header('location:form.php');
+	$_SESSION['username']=$Email;
+	header('location:login.php');
 }
 
 

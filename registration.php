@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="zxx">
 
 <head>
@@ -65,8 +65,8 @@
     <!-- //section -->
     <footer>
         <div class="copy-wthree text-center">
-            <p>© 2018 Quick Signin & Signup form. All rights reserved | Design by
-                <a href="http://w3layouts.com">W3layouts</a>
+            <p> All rights reserved | Design by
+                <a href="http://Rachnagajjar.com">Rachna Gajjar</a>
             </p>
         </div>
     </footer>
