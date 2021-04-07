@@ -27,9 +27,9 @@ session_start();
 			include 'database.php';
 			$con=get_connection();
 			$quary=get_notes(); 
-			$Check=mysqli_num_rows($quary);
+			$Check=pg_num_rows($quary);
 			$num=1;
-   while($result=mysqli_fetch_array($quary))
+   while($result=pg_fetch_array($quary))
 			{ 
 		?>
 				<tr>

@@ -12,8 +12,8 @@ if($password!=$retypepassword)
 	exit();
 }
 $query="select * from userdetail where email='$Email'";		
-$result=mysqli_query($con,$query);
-$num=mysqli_num_rows($result);
+$result=pg_query($con,$query);
+$num=pg_num_rows($result);
 if($num==1)
 {
 	echo "username is already taken";
@@ -21,7 +21,7 @@ if($num==1)
 else
 {
 	$reg="insert into userdetail(email, password,retypepassword) values ('$Email','$Password','$Retypepassword')";
-	mysqli_query($con,$reg);
+	pg_query($con,$reg);
 	$_SESSION['username']=$Email;
 	header('location:login.php');
 }

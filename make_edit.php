@@ -3,8 +3,8 @@ include 'database.php';
 $con=get_connection();
 $ida=$_GET['iddata'];
 $show=get_notes();
-$usedata=mysqli_query($con, $show);
-$arry=mysqli_fetch_array($usedata);
+$usedata=pg_query($con, $show);
+$arry=pg_fetch_array($usedata);
 if(isset($_POST['submit']))
 {
     $data=$_POST['notes'];

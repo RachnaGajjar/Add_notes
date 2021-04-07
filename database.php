@@ -1,8 +1,8 @@
 <?php
 function get_connection()
 {
-	$con=mysqli_connect('localhost','root','');
-	mysqli_select_db($con,'add_list');
+	$con=pg_connect('localhost','root','');
+	pg_select_db($con,'add_list');
 	return $con;
 
 }
@@ -11,7 +11,7 @@ function get_notes()
 {
 	$sql = "select * from notescontent where userid=".$_SESSION['id'];
 	$con=get_connection();
-	$quary = mysqli_query($con, $sql);
+	$quary = pg_query($con, $sql);
 	return $quary;	
 }
 function insert_note($note)
@@ -19,7 +19,7 @@ function insert_note($note)
 	$id=$_SESSION['id'];
 	$quary="insert into notescontent (notes,userid) values ('$note','$id')";
 	$con=get_connection();
-	$result=mysqli_query($con,$quary);
+	$result=pg_query($con,$quary);
 	return $result;
 }
 function update_note($data)
@@ -28,7 +28,7 @@ function update_note($data)
 	$idupdate=$_GET['iddata'];
 	$quary="update set notescontent id=$ida,notes=$data where id=$idupdate";
 	$con=get_connection();
-	$result=mysqli_query($con,$quary);
+	$result=pg_query($con,$quary);
 	return $result;
 }
 function delete_note()
@@ -36,7 +36,7 @@ function delete_note()
 	$ida=$_GET['iddata'];
 	$query="DELETE FROM `notescontent` WHERE id=$ida";
 	$con=get_connection();
-	mysqli_query($con, $query);
+	pg_query($con, $query);
 	return $result;
 }
 
