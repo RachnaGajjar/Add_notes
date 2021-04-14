@@ -1,8 +1,7 @@
 <?php
 function get_connection()
 {
-	$con=pg_connect('localhost','root','');
-	pg_select_db($con,'add_list');
+	$con=pg_connect('add_list');
 	return $con;
 
 }
