@@ -1,7 +1,7 @@
 <?php
 function get_connection()
 {
-	$con=pg_connect('add_list');
+	$con=pg_connect("host=localhost port=5050 dbname=add_list");
 	return $con;
 
 }
