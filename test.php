@@ -1,5 +1,5 @@
 <?php
 
-echo "Hello, just for testing";
+echo "DB_URL: " . getenv('DB_CONNECTION');
 
 ?>
