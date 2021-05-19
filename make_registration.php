@@ -10,9 +10,8 @@ if($password!=$retypepassword)
 {
 	header('location:registration.php');
 	exit();
-}
-$query="select * from userdetail where email='$Email'";		
-$result=pg_query($con,$query);
+}		
+$result=pg_query($con,"select * from userdetail where email='$Email'");
 $num=pg_num_rows($result);
 if($num==1)
 {
