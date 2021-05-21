@@ -19,8 +19,7 @@ if($num==1)
 }
 else
 {
-	$reg="insert into userdetail(email, password,retypepassword) values ('$Email','$Password','$Retypepassword')";
-	pg_query($con,$reg);
+	pg_query($con,"insert into userdetail(email, password,retypepassword) values ('$Email','$Password','$Retypepassword')");
 	$_SESSION['username']=$Email;
 	header('location:login.php');
 }
