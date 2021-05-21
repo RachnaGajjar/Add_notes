@@ -1,8 +1,8 @@
 <?php
 function get_connection()
 {
-		$connectionString=getenv("DATABASE_URL")? getenv("DATABASE_URL"): "host=localhost port=5050 dbname=add_list";
-	return $connectionString;
+	$connectionString=getenv("DATABASE_URL")? getenv("DATABASE_URL"): "host=localhost port=5050 dbname=add_list";
+	return pg_connect($connectionString);
 
 }
 
